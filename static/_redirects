@@ -1,6 +1,2 @@
 # Redirect default Netlify subdomain to primary domain
 https://brandongray-dev.netlify.com/* https://brandongray.dev/:splat 301!:
-
-# Redirect domain aliases to primary domain
-https://brandongray.dev/* https://brandongray.dev/:splat 301!
-https://www.brandongray.dev/* https://brandongray.dev/:splat 301!
