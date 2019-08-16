@@ -40,34 +40,34 @@ class BlogPage extends React.Component {
             shouldFade={this.state.menuFocused}
             invertX
           />
-      <TemplateWrapper
-        menu
-        footer
-        curPage="Blog"
-        outerBounds={{ top: '7%', left: '15%', right: '15%', bottom: '0' }}
-        title="Blog"
-        header="my writings."
-        focusCallback={this.handleFocus}
-      >
-        <div style={this.props.transition && this.props.transition.style}>
-          {posts.map(post => (
-            <BlogPost
-              key={post.node.id}
-              title={post.node.title}
-              author={post.node.author.name}
-              subtitle={post.node.content.subtitle}
-              createdAt={post.node.createdAt}
-              articleSrc={`${mediumAuthorUrl}/${post.node.uniqueSlug}`}
-              imgSrc={`${mediumCDNUrl}/${post.node.virtuals.previewImage.imageId}`}
-              imgAlt={post.node.title}
-              color={`hsl(${Math.floor(Math.random() * 360)},100%, 87.5%)`}
-              imgSize={{ width: '100%', height: '100%' }}
-            />
-          ))}
-        </div>
-        </TemplateWrapper>
-      </React.Fragment>
-    </ThemeProvider>
+          <TemplateWrapper
+            menu
+            footer
+            curPage="Blog"
+            outerBounds={{ top: '7%', left: '15%', right: '15%', bottom: '0' }}
+            title="Blog"
+            header="my writings."
+            focusCallback={this.handleFocus}
+          >
+            <div style={this.props.transition && this.props.transition.style}>
+              {posts.map(post => (
+                <BlogPost
+                  key={post.node.id}
+                  title={post.node.title}
+                  author={post.node.author.name}
+                  subtitle={post.node.content.subtitle}
+                  createdAt={post.node.createdAt}
+                  articleSrc={`${mediumAuthorUrl}/${post.node.uniqueSlug}`}
+                  imgSrc={`${mediumCDNUrl}/${post.node.virtuals.previewImage.imageId}`}
+                  imgAlt={post.node.title}
+                  color={`hsl(${Math.floor(Math.random() * 360)},100%, 87.5%)`}
+                  imgSize={{ width: '100%', height: '100%' }}
+                />
+              ))}
+            </div>
+          </TemplateWrapper>
+        </React.Fragment>
+      </ThemeProvider>
     );
   }
 }
