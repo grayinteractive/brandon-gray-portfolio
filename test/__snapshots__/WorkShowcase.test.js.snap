@@ -32,7 +32,7 @@ exports[`WorkShowcase component should render the work showcase 1`] = `
   padding: 0 5% 0 5%;
   grid-template-rows: auto;
   grid-template-areas: "title" "role" "desc" "indicator";
-  background: url(/img/experience/htn.jpg) center/cover;
+  background: url(/img/experience/sdwanportal.jpg) center/cover;
   -webkit-filter: grayscale(50%);
   filter: grayscale(50%);
   -webkit-transition: all 0.2s ease-in;
@@ -71,14 +71,14 @@ exports[`WorkShowcase component should render the work showcase 1`] = `
 }
 
 .c1 {
-  font-size: 5vw;
+  font-size: 4vw;
   font-weight: bold;
   position: relative;
   z-index: 6;
   bottom: 0;
   grid-area: title;
   white-space: nowrap;
-  padding-top: 1em;
+  padding-top: 1.5em;
   padding-bottom: 2px;
 }
 
@@ -87,7 +87,7 @@ exports[`WorkShowcase component should render the work showcase 1`] = `
   z-index: 6;
   top: -5vh;
   right: -5vw;
-  max-width: 40vw;
+  max-width: 25vw;
   max-height: 25vh;
   opacity: 0;
   -webkit-transition: all 0.3s ease-in;
@@ -154,7 +154,7 @@ exports[`WorkShowcase component should render the work showcase 1`] = `
 @media (max-width:64em) {
   .c1 {
     padding-top: 15vmin;
-    font-size: 4.5em;
+    font-size: 2.5em;
     -webkit-letter-spacing: 0;
     -moz-letter-spacing: 0;
     -ms-letter-spacing: 0;
@@ -167,13 +167,14 @@ exports[`WorkShowcase component should render the work showcase 1`] = `
     font-size: 2.5em;
     position: relative;
     padding-top: 40vw;
+    white-space: normal;
   }
 }
 
 @media (max-width:64em) {
   .c3 {
     top: -5vw;
-    max-width: 30vmin;
+    max-width: 20vmin;
     max-height: 25vmin;
   }
 }
@@ -221,21 +222,21 @@ exports[`WorkShowcase component should render the work showcase 1`] = `
   <span
     class="c1"
   >
-    Hack the North
+    Nokia
   </span>
   <div
     class="c2"
   >
-    Frontend Developer
+    Senior Web Software Designer
   </div>
   <img
     class="c3"
-    src="/img/experience/htn_logo.png"
+    src="/img/experience/nokia_logo.png"
   />
   <div
     class="c4"
   >
-    I'm working as a developer to create engaging user experiences and interfaces for Canada's largest hackathon with over 1000 attendees and thousands more applicants and users.
+    I was responsible for the design, architecture and development of the client side of this next generation service.
   </div>
   <span
     class="c5"
@@ -298,7 +299,7 @@ exports[`WorkShowcase component should show description on click 1`] = `
   padding: 0 5% 0 5%;
   grid-template-rows: auto;
   grid-template-areas: "title" "role" "desc" "indicator";
-  background: url(/img/experience/htn.jpg) center/cover;
+  background: url(/img/experience/sdwanportal.jpg) center/cover;
   -webkit-filter: grayscale(50%);
   filter: grayscale(50%);
   -webkit-transition: all 0.2s ease-in;
@@ -307,7 +308,7 @@ exports[`WorkShowcase component should show description on click 1`] = `
   transition: width 0.75s ease,height 0.75s ease;
   -webkit-filter: none;
   filter: none;
-  background: url(/img/experience/htn.jpg) center/cover;
+  background: url(/img/experience/sdwanportal.jpg) center/cover;
 }
 
 .c0:before {
@@ -348,14 +349,14 @@ exports[`WorkShowcase component should show description on click 1`] = `
 }
 
 .c1 {
-  font-size: 5vw;
+  font-size: 4vw;
   font-weight: bold;
   position: relative;
   z-index: 6;
   bottom: 0;
   grid-area: title;
   white-space: nowrap;
-  padding-top: 1em;
+  padding-top: 1.5em;
   padding-bottom: 2px;
 }
 
@@ -364,7 +365,7 @@ exports[`WorkShowcase component should show description on click 1`] = `
   z-index: 6;
   top: -5vh;
   right: -5vw;
-  max-width: 40vw;
+  max-width: 25vw;
   max-height: 25vh;
   opacity: 0;
   -webkit-transition: all 0.3s ease-in;
@@ -438,7 +439,7 @@ exports[`WorkShowcase component should show description on click 1`] = `
 @media (max-width:64em) {
   .c1 {
     padding-top: 15vmin;
-    font-size: 4.5em;
+    font-size: 2.5em;
     -webkit-letter-spacing: 0;
     -moz-letter-spacing: 0;
     -ms-letter-spacing: 0;
@@ -451,13 +452,14 @@ exports[`WorkShowcase component should show description on click 1`] = `
     font-size: 2.5em;
     position: relative;
     padding-top: 40vw;
+    white-space: normal;
   }
 }
 
 @media (max-width:64em) {
   .c3 {
     top: -5vw;
-    max-width: 30vmin;
+    max-width: 20vmin;
     max-height: 25vmin;
   }
 }
@@ -502,12 +504,40 @@ exports[`WorkShowcase component should show description on click 1`] = `
 <WorkShowcase
   work={
     Object {
-      "bgImgSource": "/img/experience/htn.jpg",
-      "color": "#7bbec1",
-      "desc": "I'm working as a developer to create engaging user experiences and interfaces for Canada's largest hackathon with over 1000 attendees and thousands more applicants and users.",
-      "logoImgSource": "/img/experience/htn_logo.png",
-      "name": "Hack the North",
-      "role": "Frontend Developer",
+      "actionLinks": Array [],
+      "bgImgSource": "/img/experience/sdwanportal.jpg",
+      "color": "#9CCDA1",
+      "desc": "I was responsible for the design, architecture and development of the client side of this next generation service.",
+      "logoImgSource": "/img/experience/nokia_logo.png",
+      "name": "Nokia",
+      "role": "Senior Web Software Designer",
+      "techStack": Array [
+        Object {
+          "color": "#8E2704",
+          "icon": "devicons devicons-angular",
+          "name": "Angular",
+        },
+        Object {
+          "color": "#0062A8",
+          "icon": "devicons devicons-javascript",
+          "name": "TypeScript",
+        },
+        Object {
+          "color": "#424242",
+          "icon": "devicons devicons-webplatform",
+          "name": "Webpack",
+        },
+        Object {
+          "color": "#EE8407",
+          "icon": "devicons devicons-html5",
+          "name": "HTML",
+        },
+        Object {
+          "color": "#4173D5",
+          "icon": "devicons devicons-css3",
+          "name": "CSS Grid",
+        },
+      ],
     }
   }
 >
@@ -529,7 +559,7 @@ exports[`WorkShowcase component should show description on click 1`] = `
     scrollThrottle={-1}
   >
     <styled.div
-      bg="/img/experience/htn.jpg"
+      bg="/img/experience/sdwanportal.jpg"
       expanded={true}
       focused={false}
       onClick={[Function]}
@@ -546,24 +576,24 @@ exports[`WorkShowcase component should show description on click 1`] = `
           <span
             className="c1"
           >
-            Hack the North
+            Nokia
           </span>
         </styled.span>
         <styled.div>
           <div
             className="c2"
           >
-            Frontend Developer
+            Senior Web Software Designer
           </div>
         </styled.div>
         <styled.img
           expanded={true}
           focused={false}
-          src="/img/experience/htn_logo.png"
+          src="/img/experience/nokia_logo.png"
         >
           <img
             className="c3"
-            src="/img/experience/htn_logo.png"
+            src="/img/experience/nokia_logo.png"
           />
         </styled.img>
         <styled.div
@@ -572,7 +602,7 @@ exports[`WorkShowcase component should show description on click 1`] = `
           <div
             className="c4"
           >
-            I'm working as a developer to create engaging user experiences and interfaces for Canada's largest hackathon with over 1000 attendees and thousands more applicants and users.
+            I was responsible for the design, architecture and development of the client side of this next generation service.
           </div>
         </styled.div>
         <styled.span>

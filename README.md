@@ -1,9 +1,9 @@
 # brandongray.dev
-[![Travis (.com)](https://img.shields.io/travis/com/brandonagray/brandonagray.github.io.svg?style=flat-square)](https://travis-ci.com/brandonagray/brandon-gray-portfolio)
-[![Coveralls github branch](https://img.shields.io/coveralls/github/brandonagray/brandonagray.github.io/master.svg?style=flat-square)](https://coveralls.io/github/brandonagray/brandon-gray-portfolio)
+[![Travis (.com)](https://img.shields.io/travis/com/brandonagray/brandon-gray-portfolio.svg?style=flat-square)](https://travis-ci.com/brandonagray/brandon-gray-portfolio)
+[![Coveralls github branch](https://img.shields.io/coveralls/github/brandonagray/brandon-gray-portfolio/master.svg?style=flat-square)](https://coveralls.io/github/brandonagray/brandon-gray-portfolio)
 [![Deploys with Netlify](https://img.shields.io/badge/Netlify-deployed-brightgreen.svg?style=flat-square)](https://www.netlify.com/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![GitHub license](https://img.shields.io/github/license/brandonagray/brandonagray.github.io.svg?style=flat-square)](https://github.com/brandonagray/brandon-gray-portfolio/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/brandonagray/brandon-gray-portfolio.svg?style=flat-square)](https://github.com/brandonagray/brandon-gray-portfolio/blob/master/LICENSE)
 
 Personal website/portfolio of Brandon Gray.
 

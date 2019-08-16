@@ -4,6 +4,7 @@ exports[`Highlight Text default state should render correctly 1`] = `
 .c0 {
   position: relative;
   z-index: 110;
+  width: 100%;
 }
 
 .c0:before {
@@ -14,7 +15,7 @@ exports[`Highlight Text default state should render correctly 1`] = `
   top: 0.25em;
   left: 0.25em;
   right: -5px;
-  height: 1em;
+  height: 100%;
   width: 0;
   z-index: -1;
   -webkit-transition: 250ms ease width;
@@ -43,6 +44,7 @@ exports[`Highlight Text hovered state should expand bg on hover 1`] = `
 .c0 {
   position: relative;
   z-index: 110;
+  width: 100%;
 }
 
 .c0:before {
@@ -53,7 +55,7 @@ exports[`Highlight Text hovered state should expand bg on hover 1`] = `
   top: 0.25em;
   left: 0.25em;
   right: -5px;
-  height: 1em;
+  height: 100%;
   width: 0;
   z-index: -1;
   -webkit-transition: 250ms ease width;
