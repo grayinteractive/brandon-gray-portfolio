@@ -72,13 +72,16 @@ const MainInfoText = styled(posed.div(fadeEnterConfig))`
 
   ${mediaSize.tablet`
     letter-spacing: ${isIOS ? '-0.05em' : 0};
+    font-weight: bold;
     line-height: 1em;
     margin-top: 1vh;
   `};
   ${mediaSize.phone`
     letter-spacing: ${isIOS ? '-0.05em' : 0};
-    line-height: 1em;
+    font-weight: bold;
     margin-top: 1vh;
+    font-size: 10vh;
+    line-height: 0.5em;
   `};
 `;
 
@@ -139,7 +142,7 @@ const Logo = posed.img({
     width: 120
   },
   normal: {
-    x: 0,
+    x: -25,
     opacity: 1,
     width: 120,
     transition: { duration: 500 }

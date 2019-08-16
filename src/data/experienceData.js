@@ -23,7 +23,7 @@ export const experienceList = [
     color: '#9CCDA1',
     bgImgSource: '/img/experience/nrc.jpg',
     logoImgSource: '/img/experience/swnable_logo.png',
-    desc: 'Designed, developed and maintained the customer portal, the company’s main website, as well as various microsites and landing pages.',
+    desc: 'I redesigned, developed and maintained the customer portal, the company’s main website, as well as various microsites and landing pages.',
     techStack: [
       {name: 'JavaScript', icon: 'devicons devicons-javascript', color: '#0062A8' },
       {name: 'Kentico', icon: 'devicons devicons-kentico', color: '#7C2ACF' },

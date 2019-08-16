@@ -59,13 +59,8 @@ const AboutPic = styled.div`
 
   ${mediaSize.tablet`
     width: 90%;
-    padding-top: 0.5em;
     padding-bottom: 1em;
     justify-self: center;
-    left: -5vw;
-  `};
-
-  ${mediaSize.phone`
     left: -5vw;
   `};
 `;

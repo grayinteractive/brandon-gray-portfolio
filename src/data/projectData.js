@@ -116,7 +116,7 @@ export const projectsList = [
 	},
 	{
 		name: 'Asili Bath & Body',
-		desc: 'A website and online shop for a local bath and beauty company.',
+		desc: 'I created the visual identity and developed a website and online shop for a local bath and beauty company.',
 		color: '#7b7ed4',
 		imgSource: '/img/projects/asili.png',
 		techStack: [
