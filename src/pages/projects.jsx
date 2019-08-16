@@ -33,7 +33,7 @@ class ProjectsPage extends React.Component {
 
   handleFocus = menuFocused => {
     this.setState({ menuFocused });
-  }
+  };
 
   render() {
     return (

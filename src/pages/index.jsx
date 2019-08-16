@@ -178,16 +178,16 @@ class HomePage extends React.Component {
 
   handleFocus = menuFocused => {
     this.setState({ menuFocused });
-  }
+  };
 
   render() {
     return (
       <ThemeProvider theme={{ colors }}>
-      <div
-        id="particleBgContainer"
-        style={this.props.transition && this.props.transition.style}
-      >
-        <Triangle
+        <div
+          id="particleBgContainer"
+          style={this.props.transition && this.props.transition.style}
+        >
+          <Triangle
             color="backgroundDark"
             height={['35vh', '60vh']}
             width={['95vw', '70vw']}
@@ -214,89 +214,88 @@ class HomePage extends React.Component {
             shouldFade={this.state.menuFocused}
             invertY
           />
-        <Particles params={particleConfig} style={ParticlesStyle} />
-        <TemplateWrapper
-          menu={{ default: true, prompt: true }}
-          curPage="Home"
-          outerBounds={{ top: '7%', left: '15%', right: '15%', bottom: '0' }}
-          title="Brandon Gray"
-          focusCallback={this.handleFocus}
-        >
-          <Logo
-            src="/img/misc/logo.png"
-            initialPose={'enter'}
-            pose={'normal'}
-          />
-          {/* NOTE: script font in logo is BarleyScript */}
-          <Greeting initialPose="enter" pose="normal">
-            {`${this.state.greeting} I'm`}
-          </Greeting>
-          <MainInfoText initialPose="enter" pose="normal">
-            <ScrambleText
-              text="Brandon Gray."
-              scramble="!<>-_\\/[]{}~—=+*^?#_abiwxevpi"
-              options={{ duration: 250, speed: 15 }}
+          <Particles params={particleConfig} style={ParticlesStyle} />
+          <TemplateWrapper
+            menu={{ default: true, prompt: true }}
+            curPage="Home"
+            outerBounds={{ top: '7%', left: '15%', right: '15%', bottom: '0' }}
+            title="Brandon Gray"
+            focusCallback={this.handleFocus}
+          >
+            <Logo
+              src="/img/misc/logo.png"
+              initialPose={'enter'}
+              pose={'normal'}
             />
-          </MainInfoText>
-          <BriefBioText initialPose="enter" pose="normal">
-            <TextLoop interval={5000} children={this.state.roles}>
-            </TextLoop>
-          </BriefBioText>
-          <ImportantInfo initialPose="enter" pose="normal">
-            <a
-              href="mailto:me@brandongray.dev"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <SVGDrawIcon
-                animate={this.state.iconAnimate}
-                ignoreHover={isMobile}
+            {/* NOTE: script font in logo is BarleyScript */}
+            <Greeting initialPose="enter" pose="normal">
+              {`${this.state.greeting} I'm`}
+            </Greeting>
+            <MainInfoText initialPose="enter" pose="normal">
+              <ScrambleText
+                text="Brandon Gray."
+                scramble="!<>-_\\/[]{}~—=+*^?#_abiwxevpi"
+                options={{ duration: 250, speed: 15 }}
+              />
+            </MainInfoText>
+            <BriefBioText initialPose="enter" pose="normal">
+              <TextLoop interval={5000} children={this.state.roles}></TextLoop>
+            </BriefBioText>
+            <ImportantInfo initialPose="enter" pose="normal">
+              <a
+                href="mailto:me@brandongray.dev"
+                target="_blank"
+                rel="noreferrer noopener"
               >
-                <Icon name="paperPlane" size="3.5vh" color="#80D07F" />
-              </SVGDrawIcon>
-            </a>
-             <a
-              href="https://github.com/brandonagray"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <SVGDrawIcon
-                animate={this.state.iconAnimate}
-                ignoreHover={isMobile}
+                <SVGDrawIcon
+                  animate={this.state.iconAnimate}
+                  ignoreHover={isMobile}
+                >
+                  <Icon name="paperPlane" size="3.5vh" color="#80D07F" />
+                </SVGDrawIcon>
+              </a>
+              <a
+                href="https://github.com/brandonagray"
+                target="_blank"
+                rel="noreferrer noopener"
               >
-                <Icon name="github" size="3.5vh" color="#5534AC" />
-              </SVGDrawIcon>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/brandonagray/"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <SVGDrawIcon
-                animate={this.state.iconAnimate}
-                ignoreHover={isMobile}
+                <SVGDrawIcon
+                  animate={this.state.iconAnimate}
+                  ignoreHover={isMobile}
+                >
+                  <Icon name="github" size="3.5vh" color="#5534AC" />
+                </SVGDrawIcon>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/brandonagray/"
+                target="_blank"
+                rel="noreferrer noopener"
               >
-                <Icon name="linkedin" size="3.5vh" color="#2381D9" />
-              </SVGDrawIcon>
-            </a>
-            <a
-              href="https://www.instagram.com/thegraydisplay/"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <SVGDrawIcon
-                animate={this.state.iconAnimate}
-                ignoreHover={isMobile}
+                <SVGDrawIcon
+                  animate={this.state.iconAnimate}
+                  ignoreHover={isMobile}
+                >
+                  <Icon name="linkedin" size="3.5vh" color="#2381D9" />
+                </SVGDrawIcon>
+              </a>
+              <a
+                href="https://www.instagram.com/thegraydisplay/"
+                target="_blank"
+                rel="noreferrer noopener"
               >
-                <Icon name="aperture" size="3.5vh" color="#E4405F" />
-              </SVGDrawIcon>
-            </a>
-          </ImportantInfo>
-          <MainPagePic initialPose="enter" pose="normal">
-            <Img sizes={this.props.data.mainImage.sizes} />
-          </MainPagePic>
-        </TemplateWrapper>
-      </div>
+                <SVGDrawIcon
+                  animate={this.state.iconAnimate}
+                  ignoreHover={isMobile}
+                >
+                  <Icon name="aperture" size="3.5vh" color="#E4405F" />
+                </SVGDrawIcon>
+              </a>
+            </ImportantInfo>
+            <MainPagePic initialPose="enter" pose="normal">
+              <Img sizes={this.props.data.mainImage.sizes} />
+            </MainPagePic>
+          </TemplateWrapper>
+        </div>
       </ThemeProvider>
     );
   }

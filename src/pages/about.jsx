@@ -271,7 +271,7 @@ class AboutPage extends React.Component {
 
   handleFocus = menuFocused => {
     this.setState({ menuFocused });
-  }
+  };
 
   render() {
     return (
@@ -378,17 +378,20 @@ class AboutPage extends React.Component {
                 </AboutInterests>
 
                 <AboutIntro>
-                  I'm Brandon - front end web developer and UI designer. Originally
-                  from small town Nova Scotia, Canada, I moved to Ottawa, Ontario and have made it
-                  my home. Now, I'm travelling the world, visiting countries I've never been to
-                  before and bringing my work with me - trying out this 'digital nomad' thing! I'm
-              extremely excited for this next journey I've embarked on!<br />
+                  I'm Brandon - front end web developer and UI designer.
+                  Originally from small town Nova Scotia, Canada, I moved to
+                  Ottawa, Ontario and have made it my home. Now, I'm travelling
+                  the world, visiting countries I've never been to before and
+                  bringing my work with me - trying out this 'digital nomad'
+                  thing! I'm extremely excited for this next journey I've
+                  embarked on!
+                  <br />
                   <RevealButton
                     onClick={() => this.revealDetailedIntro()}
                     revealed={this.state.revealed}
                   >
                     Tell me more!
-              </RevealButton>
+                  </RevealButton>
                   <DetailedIntro revealed={this.state.revealed}>
                     {DESC_PARAGRAPHS.map((para, i) => {
                       return <p key={i}>{para}</p>;

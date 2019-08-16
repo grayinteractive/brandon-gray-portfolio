@@ -236,7 +236,7 @@ exports[`WorkShowcase component should render the work showcase 1`] = `
   <div
     class="c4"
   >
-    I was responsible for the design, architecture and development of the client side of this next generation service.
+    I was responsible for the design, architecture and development of the client side of a next generation service.
   </div>
   <span
     class="c5"
@@ -507,7 +507,7 @@ exports[`WorkShowcase component should show description on click 1`] = `
       "actionLinks": Array [],
       "bgImgSource": "/img/experience/sdwanportal.jpg",
       "color": "#9CCDA1",
-      "desc": "I was responsible for the design, architecture and development of the client side of this next generation service.",
+      "desc": "I was responsible for the design, architecture and development of the client side of a next generation service.",
       "logoImgSource": "/img/experience/nokia_logo.png",
       "name": "Nokia",
       "role": "Senior Web Software Designer",
@@ -602,7 +602,7 @@ exports[`WorkShowcase component should show description on click 1`] = `
           <div
             className="c4"
           >
-            I was responsible for the design, architecture and development of the client side of this next generation service.
+            I was responsible for the design, architecture and development of the client side of a next generation service.
           </div>
         </styled.div>
         <styled.span>

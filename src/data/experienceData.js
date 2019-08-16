@@ -5,7 +5,7 @@ export const experienceList = [
     color: '#9CCDA1',
     bgImgSource: '/img/experience/sdwanportal.jpg',
     logoImgSource: '/img/experience/nokia_logo.png',
-    desc: 'I was responsible for the design, architecture and development of the client side of this next generation service.',
+    desc: 'I was responsible for the design, architecture and development of the client side of a next generation service.',
     techStack: [
       {name: 'Angular', icon: 'devicons devicons-angular', color: '#8E2704' },
       {name: 'TypeScript', icon: 'devicons devicons-javascript', color: '#0062A8' },

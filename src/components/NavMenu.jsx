@@ -83,7 +83,7 @@ const Prompt = styled.div`
 const Menu = styled(posed.div(MenuConfig))`
   width: 2.5em;
   height: 2.5em;
-  background-color: #85CEE8;
+  background-color: #85cee8;
   opacity: 1;
 
   grid-area: menu;

@@ -12,7 +12,7 @@ class BlogPage extends React.Component {
 
   handleFocus = menuFocused => {
     this.setState({ menuFocused });
-  }
+  };
 
   render() {
     const posts = this.props.data.allMediumPost.edges;
@@ -35,9 +35,7 @@ class BlogPage extends React.Component {
               subtitle={post.node.content.subtitle}
               createdAt={post.node.createdAt}
               articleSrc={`${mediumAuthorUrl}/${post.node.uniqueSlug}`}
-              imgSrc={`${mediumCDNUrl}/${
-                post.node.virtuals.previewImage.imageId
-              }`}
+              imgSrc={`${mediumCDNUrl}/${post.node.virtuals.previewImage.imageId}`}
               imgAlt={post.node.title}
               color={`hsl(${Math.floor(Math.random() * 360)},100%, 87.5%)`}
               imgSize={{ width: '100%', height: '100%' }}
