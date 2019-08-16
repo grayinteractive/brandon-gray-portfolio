@@ -57,6 +57,10 @@ const fadeEnterConfig = {
 const Greeting = styled(posed.div(fadeEnterConfig))`
   font-size: 5vh;
   margin-top: 16%;
+
+  ${mediaSize.phone`
+    margin-top: 12%;
+  `};
 `;
 
 const MainInfoText = styled(posed.div(fadeEnterConfig))`
@@ -68,8 +72,12 @@ const MainInfoText = styled(posed.div(fadeEnterConfig))`
 
   ${mediaSize.tablet`
     letter-spacing: ${isIOS ? '-0.05em' : 0};
-    font-weight: bold;
-    line-height: 1.1em;
+    line-height: 1em;
+    margin-top: 1vh;
+  `};
+  ${mediaSize.phone`
+    letter-spacing: ${isIOS ? '-0.05em' : 0};
+    line-height: 1em;
     margin-top: 1vh;
   `};
 `;

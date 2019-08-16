@@ -125,6 +125,7 @@ const WorkTitle = styled.span`
     font-size: 2.5em;
     position: relative;
     padding-top: 40vw;
+    white-space: normal;
   `};
 `;
 
