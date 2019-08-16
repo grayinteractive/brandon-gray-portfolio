@@ -45,7 +45,8 @@ export const projectsList = [ // eslint-disable-line
       {name: 'Webpack', icon: 'devicons devicons-webplatform', color: '#666666' },
     ],
     actionLinks: [
-      {name: "View on Web", icon: "monitor", url: "https://www.brandongray.dev"}
+      {name: "View on Web", icon: "monitor", url: "https://www.brandongray.dev"},
+      {name: "Github", icon: "github", url: "https://github.com/brandonagray/brandon-gray-portfolio"}
     ]
   },
   {
