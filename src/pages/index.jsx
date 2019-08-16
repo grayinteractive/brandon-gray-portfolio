@@ -81,7 +81,7 @@ const MainInfoText = styled(posed.div(fadeEnterConfig))`
     font-weight: bold;
     margin-top: 1vh;
     font-size: 10vh;
-    line-height: 0.5em;
+    line-height: 0.9em;
   `};
 `;
 

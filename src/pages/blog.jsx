@@ -1,6 +1,9 @@
 import React from 'react';
+import styled, { ThemeProvider } from 'styled-components';
 import BlogPost from '../components/BlogPost';
 import TemplateWrapper from '../components/TemplateWrapper';
+import Triangle from '../components/Triangle';
+import colors from '../../colors';
 
 const mediumCDNUrl = 'https://cdn-images-1.medium.com/max/750/';
 const mediumAuthorUrl = 'https://medium.com/@brandonagray';
@@ -8,6 +11,11 @@ const mediumAuthorUrl = 'https://medium.com/@brandonagray';
 class BlogPage extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      revealed: false,
+      menuFocused: false
+    };
+    this.theme = colors;
   }
 
   handleFocus = menuFocused => {
@@ -17,13 +25,28 @@ class BlogPage extends React.Component {
   render() {
     const posts = this.props.data.allMediumPost.edges;
     return (
+      <ThemeProvider theme={{ colors }}>
+        <React.Fragment>
+          <Triangle
+            color="backgroundDark"
+            height={['65vh', '70vh']}
+            width={['25vw', '20vw']}
+            shouldFade={this.state.menuFocused}
+          />
+          <Triangle
+            color="secondary"
+            height={['20vh', '45vh']}
+            width={['95vw', '20vw']}
+            shouldFade={this.state.menuFocused}
+            invertX
+          />
       <TemplateWrapper
         menu
         footer
         curPage="Blog"
         outerBounds={{ top: '7%', left: '15%', right: '15%', bottom: '0' }}
         title="Blog"
-        header="my ramblings."
+        header="my writings."
         focusCallback={this.handleFocus}
       >
         <div style={this.props.transition && this.props.transition.style}>
@@ -42,7 +65,9 @@ class BlogPage extends React.Component {
             />
           ))}
         </div>
-      </TemplateWrapper>
+        </TemplateWrapper>
+      </React.Fragment>
+    </ThemeProvider>
     );
   }
 }
