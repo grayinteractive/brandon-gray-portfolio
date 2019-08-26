@@ -1,5 +1,6 @@
 import React from 'react';
 import ScrambleText from '../src/components/ScrambleText';
+import 'jest-styled-components'
 
 describe('ScrambleText component', () => {
   jest.useFakeTimers();

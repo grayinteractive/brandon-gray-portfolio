@@ -6,6 +6,7 @@ export const projectsList = [
 			'Developed the front end for this next-generation networking service.',
 		color: '#9CCDA1',
 		imgSource: '/img/projects/sdwan-portal.png',
+		imgGallery: '/img/projects/1',
 		techStack: [
 			{ name: 'Angular', icon: 'devicons devicons-angular', color: '#DD0330' },
 			{
@@ -29,6 +30,7 @@ export const projectsList = [
 			'Designed and developed the new customer portal for Solarwinds N-able.',
 		color: '#9CCDA1',
 		imgSource: '/img/projects/nrc-dash.png',
+		imgGallery: '/img/projects/2',
 		techStack: [
 			{
 				name: 'Kentico',
@@ -58,6 +60,7 @@ export const projectsList = [
 			'Error: Maximum recursion depth exceeded. (memory_address: 0xObebebebe)',
 		color: '#9CCDA1',
 		imgSource: '/img/projects/brandongraywebsite.png',
+		imgGallery: '/img/projects/3',
 		techStack: [
 			{ name: 'React', icon: 'devicons devicons-react', color: '#02C7E9' },
 			{
@@ -97,6 +100,7 @@ export const projectsList = [
 			'An online tool for assessing the business of potential customers for Solarwinds N-able.',
 		color: '#9CCDA1',
 		imgSource: '/img/projects/bizassess.png',
+		imgGallery: '/img/projects/4',
 		techStack: [
 			{ name: 'Angular', icon: 'devicons devicons-angular', color: '#DD0330' },
 			{
@@ -116,9 +120,10 @@ export const projectsList = [
 	},
 	{
 		name: 'Asili Bath & Body',
-		desc: 'I created the visual identity and developed a website and online shop for a local bath and beauty company.',
+		desc: 'A custom Wordpress theme and e-commerce site built with Wordpress and Woocommerce for a new local bath and beauty company.',
 		color: '#7b7ed4',
 		imgSource: '/img/projects/asili.png',
+		imgGallery: '/img/projects/5',
 		techStack: [
 			{
 				name: 'Wordpress',
@@ -162,6 +167,7 @@ export const projectsList = [
 		desc: 'A promotional site created for a new Android product.',
 		color: '#6e82b0',
 		imgSource: '/img/projects/secure-spaces.png',
+		imgGallery: '/img/projects/6',
 		techStack: [
 			{
 				name: 'Wordpress',
@@ -178,6 +184,7 @@ export const projectsList = [
 			'A website for a hydroseeding business in the National Captial Region.',
 		color: '#6e82b0',
 		imgSource: '/img/projects/hydroseeding.png',
+		imgGallery: '/img/projects/7',
 		techStack: [
 			{
 				name: 'Wordpress',

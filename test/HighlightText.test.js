@@ -1,5 +1,6 @@
 import React from 'react';
 import HighlightText from '../src/components/HighlightText';
+import 'jest-styled-components';
 
 describe('Highlight Text', () => {
   let text;

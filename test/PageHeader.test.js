@@ -1,5 +1,6 @@
 import React from 'react';
 import PageHeader from '../src/components/PageHeader';
+import 'jest-styled-components'
 
 describe('Page Header', () => {
   jest.mock('react-device-detect', () => ({

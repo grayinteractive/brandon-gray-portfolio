@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import posed from 'react-pose';
 import { isMobile } from 'react-device-detect';
 import onClickOutside from 'react-onclickoutside';

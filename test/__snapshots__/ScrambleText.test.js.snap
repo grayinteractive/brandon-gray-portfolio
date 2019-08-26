@@ -28,13 +28,55 @@ exports[`ScrambleText component should render the scrambled text 1`] = `
     onAnimationEnd={[Function]}
     onClick={[Function]}
   >
-    <span
-      className="c0"
+    <StyledComponent
+      className={null}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": true,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  @keyframes pop {
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  display: inline-block; // Allows scale animation on inline element
+  animation: none;
+  cursor: default;
+
+  &.boop {
+    animation: pop 0.3s ease-in-out 1;
+  }
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       onAnimationEnd={[Function]}
       onClick={[Function]}
     >
-       
-    </span>
+      <span
+        className="c0"
+        onAnimationEnd={[Function]}
+        onClick={[Function]}
+      >
+         
+      </span>
+    </StyledComponent>
   </styled.span>
 </ScrambleText>
 `;

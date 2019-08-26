@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import posed from 'react-pose';
 import { mediaSize } from '../data/configOptions';
 import TemplateWrapper from '../components/TemplateWrapper';
@@ -7,6 +7,13 @@ import ProjectShowcase from '../components/ProjectShowcase';
 import { projectsList } from '../data/projectData';
 import Triangle from '../components/Triangle';
 import colors from '../../colors';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+`;
 
 const ProjectGrid = styled.div`
   display: grid;
@@ -39,6 +46,7 @@ class ProjectsPage extends React.Component {
     return (
       <ThemeProvider theme={{ colors }}>
         <React.Fragment>
+          <GlobalStyle />
           <Triangle
             color="backgroundDark"
             height={['35vh', '80vh']}

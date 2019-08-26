@@ -6,11 +6,12 @@
 */
 
 import React from 'react';
-import styled, { ThemeProvider, injectGlobal } from 'styled-components';
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import posed from 'react-pose';
 import Text from 'rebass';
+import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import Particles from 'react-particles-js';
 import TextLoop from 'react-text-loop';
 import { isMobile, isIOS } from 'react-device-detect';
@@ -28,7 +29,7 @@ import Triangle from '../components/Triangle';
 
 import colors from '../../colors';
 
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     overflow-x: hidden;
@@ -170,8 +171,8 @@ class HomePage extends React.Component {
       this.iconAnimateID = setTimeout(() => {
         this.setState({ iconAnimate: true });
       }, 3000);
-    }
   }
+}
 
   componentWillUnmount() {
     if (this.iconAnimateID) {
@@ -186,6 +187,8 @@ class HomePage extends React.Component {
   render() {
     return (
       <ThemeProvider theme={{ colors }}>
+        <React.Fragment>
+        <GlobalStyle />
         <div
           id="particleBgContainer"
           style={this.props.transition && this.props.transition.style}
@@ -295,10 +298,11 @@ class HomePage extends React.Component {
               </a>
             </ImportantInfo>
             <MainPagePic initialPose="enter" pose="normal">
-              <Img sizes={this.props.data.mainImage.sizes} />
+              <Img fluid={this.props.data.mainImage.fluid} />
             </MainPagePic>
           </TemplateWrapper>
         </div>
+        </React.Fragment>
       </ThemeProvider>
     );
   }
@@ -308,10 +312,10 @@ export default HomePage;
 
 // Loads main image on page
 export const pageQuery = graphql`
-  query HomeQuery {
-    mainImage: imageSharp(id: { regex: "/index_main.png/" }) {
-      sizes(maxWidth: 1500) {
-        ...GatsbyImageSharpSizes_tracedSVG
+  {
+    mainImage: imageSharp(fluid: {originalName: { regex: "/index_main.png/" }}) {
+      fluid(maxWidth: 1500) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   }

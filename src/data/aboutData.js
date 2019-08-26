@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
 
 export const STATS_COUNTER_DURATION = 3;
 
@@ -12,12 +11,12 @@ export const STATS_LIST = [
 	{
 		name: 'Years Coding',
 		start: 0,
-		end: 14,
+		end: 12,
 	},
 	{
 		name: 'Countries Visited',
 		start: 0,
-		end: 11,
+		end: 10,
 	},
 ];
 

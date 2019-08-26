@@ -1,9 +1,17 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
+import { graphql } from 'gatsby';
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import BlogPost from '../components/BlogPost';
 import TemplateWrapper from '../components/TemplateWrapper';
 import Triangle from '../components/Triangle';
 import colors from '../../colors';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+`;
 
 const mediumCDNUrl = 'https://cdn-images-1.medium.com/max/750/';
 const mediumAuthorUrl = 'https://medium.com/@brandonagray';
@@ -27,6 +35,7 @@ class BlogPage extends React.Component {
     return (
       <ThemeProvider theme={{ colors }}>
         <React.Fragment>
+          <GlobalStyle />
           <Triangle
             color="backgroundDark"
             height={['65vh', '70vh']}
@@ -75,7 +84,7 @@ class BlogPage extends React.Component {
 export default BlogPage;
 
 export const pageQuery = graphql`
-  query BlogQuery {
+  {
     allMediumPost(limit: 5, sort: { fields: [createdAt], order: DESC }) {
       edges {
         node {

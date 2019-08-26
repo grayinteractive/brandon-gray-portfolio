@@ -1,5 +1,6 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
+import { graphql } from 'gatsby';
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import Img from 'gatsby-image';
 import ReactTooltip from 'react-tooltip';
 import { mediaSize } from '../data/configOptions';
@@ -17,6 +18,13 @@ import {
   STATS_COUNTER_DURATION,
   STATS_LIST
 } from '../data/aboutData';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+`;
 
 const Container = styled.div`
   display: grid;
@@ -272,6 +280,7 @@ class AboutPage extends React.Component {
     return (
       <ThemeProvider theme={{ colors }}>
         <React.Fragment>
+          <GlobalStyle />
           <Triangle
             color="backgroundDark"
             height={['35vh', '60vh']}
@@ -297,7 +306,7 @@ class AboutPage extends React.Component {
             <div style={this.props.transition && this.props.transition.style}>
               <Container>
                 <AboutPic>
-                  <AboutImg sizes={this.props.data.profileImage.sizes} />
+                  <AboutImg fluid={this.props.data.profileImage.fluid} />
                 </AboutPic>
 
                 <AboutStats>
@@ -405,10 +414,10 @@ class AboutPage extends React.Component {
 export default AboutPage;
 
 export const pageQuery = graphql`
-  query AboutPageQuery {
-    profileImage: imageSharp(id: { regex: "/me.png/" }) {
-      sizes(maxWidth: 400) {
-        ...GatsbyImageSharpSizes_tracedSVG
+  {
+    profileImage: imageSharp(fluid: {originalName: { regex: "/me.png/" }}) {
+      fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   }

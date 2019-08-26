@@ -46,7 +46,7 @@ exports[`Floating Text should render the floating text 1`] = `
   >
     There's more!
     <span
-      style="position:relative;top:1.2em;right:0.7em;"
+      style="position:relative;top:1.2em;right:0.7em"
     >
       <span
         class="c2"
@@ -113,7 +113,7 @@ exports[`Floating Text should render with default values 1`] = `
   >
     There's more!
     <span
-      style="position:relative;top:1.2em;right:0.7em;"
+      style="position:relative;top:1.2em;right:0.7em"
     >
       <span
         class="c2"

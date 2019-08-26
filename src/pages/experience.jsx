@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import posed from 'react-pose';
 
 import TemplateWrapper from '../components/TemplateWrapper';
@@ -8,6 +8,13 @@ import WorkShowcase from '../components/WorkShowcase';
 import { experienceList } from '../data/experienceData';
 import Triangle from '../components/Triangle';
 import colors from '../../colors';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+`;
 
 class ExperiencePage extends React.Component {
   constructor(props) {
@@ -23,26 +30,27 @@ class ExperiencePage extends React.Component {
     return (
       <ThemeProvider theme={{ colors }}>
         <React.Fragment>
+          <GlobalStyle />
           <Triangle
-            color="backgroundDark"
+            color='backgroundDark'
             height={['38vh', '25vh']}
             width={['50vw', '60vw']}
             shouldFade={this.state.menuFocused}
             invertX
           />
           <Triangle
-            color="secondary"
+            color='secondary'
             height={['25vh', '75vh']}
             width={['95vw', '25vw']}
             shouldFade={this.state.menuFocused}
           />
           <TemplateWrapper
-            header="work experience."
+            header='work experience.'
             menu
             footer
-            curPage="Work Experience"
+            curPage='Work Experience'
             outerBounds={{ top: '7%', left: '15%', right: '15%', bottom: '0' }}
-            title="Work Experience"
+            title='Work Experience'
             focusCallback={this.handleFocus}
           >
             <div style={this.props.transition && this.props.transition.style}>

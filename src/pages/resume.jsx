@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import Particles from 'react-particles-js';
 import { isMobile } from 'react-device-detect';
 import VisibilitySensor from 'react-visibility-sensor';
@@ -9,6 +9,13 @@ import ResumeBox from '../components/ResumeBox';
 
 import Icon from '../components/Icon';
 import { particleConfig, resumeOptions } from '../data/configOptions';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+`;
 
 const ParticlesStyle = {
   position: 'fixed',

@@ -12,9 +12,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-react-next',
-    },
-    {
       resolve: 'gatsby-plugin-styled-components',
     },
     {
@@ -50,7 +47,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: `UA-114911192-3`,
+        trackingId: `UA-146062164-1`,
         // Puts tracking script in the head instead of the body
         head: false,
       }

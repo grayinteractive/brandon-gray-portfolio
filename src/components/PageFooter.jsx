@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { animateScroll } from 'react-scroll';
-import Link from 'gatsby-link';
 
 import { mediaSize } from '../data/configOptions';
 
@@ -20,7 +19,7 @@ const FooterContainer = styled.span`
   justify-items: center;
   align-items: center;
   grid-template-areas:
-    'contactIcon resumeIcon topIcon githubIcon linkedinIcon'
+    'contactIcon instagramIcon topIcon githubIcon linkedinIcon'
     'copyright copyright copyright copyright copyright';
 
   ${mediaSize.tablet`
@@ -41,11 +40,15 @@ const PageFooter = () => (
         <Icon name="paperPlane" size="2vh" color="#80D07F" />
       </SVGDrawIcon>
     </a>
-    <Link to="/resume" style={{ gridArea: 'resumeIcon' }}>
+    <a
+      href="https://www.instagram.com/thegraydisplay/"
+      target="_blank"
+      style={{ gridArea: 'instagramIcon' }}
+    >
       <SVGDrawIcon>
-        <Icon name="file" size="2vh" color="#DE7947" />
+        <Icon name="aperture" size="2vh" color="#E4405F" />
       </SVGDrawIcon>
-    </Link>
+    </a>
     <span
       id="scrollToTopTrigger"
       style={{ gridArea: 'topIcon' }}
