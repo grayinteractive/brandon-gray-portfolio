@@ -171,8 +171,8 @@ class HomePage extends React.Component {
       this.iconAnimateID = setTimeout(() => {
         this.setState({ iconAnimate: true });
       }, 3000);
+    }
   }
-}
 
   componentWillUnmount() {
     if (this.iconAnimateID) {
@@ -188,120 +188,128 @@ class HomePage extends React.Component {
     return (
       <ThemeProvider theme={{ colors }}>
         <React.Fragment>
-        <GlobalStyle />
-        <div
-          id="particleBgContainer"
-          style={this.props.transition && this.props.transition.style}
-        >
-          <Triangle
-            color="backgroundDark"
-            height={['35vh', '60vh']}
-            width={['95vw', '70vw']}
-            shouldFade={this.state.menuFocused}
-            invertX
-          />
-          <Triangle
-            color="secondary"
-            height={['38vh', '30vh']}
-            width={['50vw', '80vw']}
-            shouldFade={this.state.menuFocused}
-          />
-          <Triangle
-            color="primaryDark"
-            height={['25vh', '75vh']}
-            width={['75vw', '30vw']}
-            shouldFade={this.state.menuFocused}
-            invertX
-          />
-          <Triangle
-            color="backgroundDark"
-            height={['20vh', '30vh']}
-            width={['100vw', '90vw']}
-            shouldFade={this.state.menuFocused}
-            invertY
-          />
-          <Particles params={particleConfig} style={ParticlesStyle} />
-          <TemplateWrapper
-            menu={{ default: true, prompt: true }}
-            curPage="Home"
-            outerBounds={{ top: '7%', left: '15%', right: '15%', bottom: '0' }}
-            title="Brandon Gray"
-            focusCallback={this.handleFocus}
+          <GlobalStyle />
+          <div
+            id="particleBgContainer"
+            style={this.props.transition && this.props.transition.style}
           >
-            <Logo
-              src="/img/misc/logo.png"
-              initialPose={'enter'}
-              pose={'normal'}
+            <Triangle
+              color="backgroundDark"
+              height={['35vh', '60vh']}
+              width={['95vw', '70vw']}
+              shouldFade={this.state.menuFocused}
+              invertX
             />
-            {/* NOTE: script font in logo is BarleyScript */}
-            <Greeting initialPose="enter" pose="normal">
-              {`${this.state.greeting} I'm`}
-            </Greeting>
-            <MainInfoText initialPose="enter" pose="normal">
-              <ScrambleText
-                text="Brandon Gray."
-                scramble="!<>-_\\/[]{}~—=+*^?#_abiwxevpi"
-                options={{ duration: 250, speed: 15 }}
+            <Triangle
+              color="secondary"
+              height={['38vh', '30vh']}
+              width={['50vw', '80vw']}
+              shouldFade={this.state.menuFocused}
+            />
+            <Triangle
+              color="primaryDark"
+              height={['25vh', '75vh']}
+              width={['75vw', '30vw']}
+              shouldFade={this.state.menuFocused}
+              invertX
+            />
+            <Triangle
+              color="backgroundDark"
+              height={['20vh', '30vh']}
+              width={['100vw', '90vw']}
+              shouldFade={this.state.menuFocused}
+              invertY
+            />
+            <Particles params={particleConfig} style={ParticlesStyle} />
+            <TemplateWrapper
+              menu={{ default: true, prompt: true }}
+              curPage="Home"
+              outerBounds={{
+                top: '7%',
+                left: '15%',
+                right: '15%',
+                bottom: '0'
+              }}
+              title="Brandon Gray"
+              focusCallback={this.handleFocus}
+            >
+              <Logo
+                src="/img/misc/logo.png"
+                initialPose={'enter'}
+                pose={'normal'}
               />
-            </MainInfoText>
-            <BriefBioText initialPose="enter" pose="normal">
-              <TextLoop interval={5000} children={this.state.roles}></TextLoop>
-            </BriefBioText>
-            <ImportantInfo initialPose="enter" pose="normal">
-              <a
-                href="mailto:me@brandongray.dev"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <SVGDrawIcon
-                  animate={this.state.iconAnimate}
-                  ignoreHover={isMobile}
+              {/* NOTE: script font in logo is BarleyScript */}
+              <Greeting initialPose="enter" pose="normal">
+                {`${this.state.greeting} I'm`}
+              </Greeting>
+              <MainInfoText initialPose="enter" pose="normal">
+                <ScrambleText
+                  text="Brandon Gray."
+                  scramble="!<>-_\\/[]{}~—=+*^?#_abiwxevpi"
+                  options={{ duration: 250, speed: 15 }}
+                />
+              </MainInfoText>
+              <BriefBioText initialPose="enter" pose="normal">
+                <TextLoop
+                  interval={5000}
+                  children={this.state.roles}
+                ></TextLoop>
+              </BriefBioText>
+              <ImportantInfo initialPose="enter" pose="normal">
+                <a
+                  href="mailto:me@brandongray.dev"
+                  target="_blank"
+                  rel="noreferrer noopener"
                 >
-                  <Icon name="paperPlane" size="3.5vh" color="#80D07F" />
-                </SVGDrawIcon>
-              </a>
-              <a
-                href="https://github.com/brandonagray"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <SVGDrawIcon
-                  animate={this.state.iconAnimate}
-                  ignoreHover={isMobile}
+                  <SVGDrawIcon
+                    animate={this.state.iconAnimate}
+                    ignoreHover={isMobile}
+                  >
+                    <Icon name="paperPlane" size="3.5vh" color="#80D07F" />
+                  </SVGDrawIcon>
+                </a>
+                <a
+                  href="https://github.com/brandonagray"
+                  target="_blank"
+                  rel="noreferrer noopener"
                 >
-                  <Icon name="github" size="3.5vh" color="#5534AC" />
-                </SVGDrawIcon>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/brandonagray/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <SVGDrawIcon
-                  animate={this.state.iconAnimate}
-                  ignoreHover={isMobile}
+                  <SVGDrawIcon
+                    animate={this.state.iconAnimate}
+                    ignoreHover={isMobile}
+                  >
+                    <Icon name="github" size="3.5vh" color="#5534AC" />
+                  </SVGDrawIcon>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/brandonagray/"
+                  target="_blank"
+                  rel="noreferrer noopener"
                 >
-                  <Icon name="linkedin" size="3.5vh" color="#2381D9" />
-                </SVGDrawIcon>
-              </a>
-              <a
-                href="https://www.instagram.com/thegraydisplay/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <SVGDrawIcon
-                  animate={this.state.iconAnimate}
-                  ignoreHover={isMobile}
+                  <SVGDrawIcon
+                    animate={this.state.iconAnimate}
+                    ignoreHover={isMobile}
+                  >
+                    <Icon name="linkedin" size="3.5vh" color="#2381D9" />
+                  </SVGDrawIcon>
+                </a>
+                <a
+                  href="https://www.instagram.com/thegraydisplay/"
+                  target="_blank"
+                  rel="noreferrer noopener"
                 >
-                  <Icon name="aperture" size="3.5vh" color="#E4405F" />
-                </SVGDrawIcon>
-              </a>
-            </ImportantInfo>
-            <MainPagePic initialPose="enter" pose="normal">
-              <Img fluid={this.props.data.mainImage.fluid} />
-            </MainPagePic>
-          </TemplateWrapper>
-        </div>
+                  <SVGDrawIcon
+                    animate={this.state.iconAnimate}
+                    ignoreHover={isMobile}
+                  >
+                    <Icon name="aperture" size="3.5vh" color="#E4405F" />
+                  </SVGDrawIcon>
+                </a>
+              </ImportantInfo>
+              <MainPagePic initialPose="enter" pose="normal">
+                <Img fluid={this.props.data.mainImage.fluid} />
+              </MainPagePic>
+            </TemplateWrapper>
+          </div>
         </React.Fragment>
       </ThemeProvider>
     );
@@ -313,7 +321,9 @@ export default HomePage;
 // Loads main image on page
 export const pageQuery = graphql`
   {
-    mainImage: imageSharp(fluid: {originalName: { regex: "/index_main.png/" }}) {
+    mainImage: imageSharp(
+      fluid: { originalName: { regex: "/index_main.png/" } }
+    ) {
       fluid(maxWidth: 1500) {
         ...GatsbyImageSharpFluid_tracedSVG
       }

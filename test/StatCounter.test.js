@@ -1,6 +1,6 @@
 import React from 'react';
 import StatCounter from '../src/components/StatCounter';
-import 'jest-styled-components'
+import 'jest-styled-components';
 
 describe('StatCounter component', () => {
   it('should render the stat counter', () => {

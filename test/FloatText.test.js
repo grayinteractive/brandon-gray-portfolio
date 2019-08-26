@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Icon from '../src/components/Icon';
 import FloatText from '../src/components/FloatText';
-import 'jest-styled-components'
+import 'jest-styled-components';
 
 const Prompt = styled.div`
   position: absolute;

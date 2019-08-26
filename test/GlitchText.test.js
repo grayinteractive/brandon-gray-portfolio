@@ -1,6 +1,6 @@
 import React from 'react';
 import GlitchText from '../src/components/GlitchText';
-import 'jest-styled-components'
+import 'jest-styled-components';
 
 describe('Glitch Text', () => {
   let text;

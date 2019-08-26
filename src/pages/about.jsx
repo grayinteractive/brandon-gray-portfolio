@@ -415,7 +415,7 @@ export default AboutPage;
 
 export const pageQuery = graphql`
   {
-    profileImage: imageSharp(fluid: {originalName: { regex: "/me.png/" }}) {
+    profileImage: imageSharp(fluid: { originalName: { regex: "/me.png/" } }) {
       fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid_tracedSVG
       }

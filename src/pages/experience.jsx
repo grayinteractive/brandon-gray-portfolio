@@ -32,25 +32,25 @@ class ExperiencePage extends React.Component {
         <React.Fragment>
           <GlobalStyle />
           <Triangle
-            color='backgroundDark'
+            color="backgroundDark"
             height={['38vh', '25vh']}
             width={['50vw', '60vw']}
             shouldFade={this.state.menuFocused}
             invertX
           />
           <Triangle
-            color='secondary'
+            color="secondary"
             height={['25vh', '75vh']}
             width={['95vw', '25vw']}
             shouldFade={this.state.menuFocused}
           />
           <TemplateWrapper
-            header='work experience.'
+            header="work experience."
             menu
             footer
-            curPage='Work Experience'
+            curPage="Work Experience"
             outerBounds={{ top: '7%', left: '15%', right: '15%', bottom: '0' }}
-            title='Work Experience'
+            title="Work Experience"
             focusCallback={this.handleFocus}
           >
             <div style={this.props.transition && this.props.transition.style}>

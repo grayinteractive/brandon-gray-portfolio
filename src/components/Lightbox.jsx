@@ -1,78 +1,88 @@
-import React, { Component, Fragment } from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import Img from 'gatsby-image'
+import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 class Lightbox extends Component {
   state = {
     showLightbox: false,
-    selectedImage: 0,
-  }
+    selectedImage: 0
+  };
 
   componentDidMount = () => {
-    window.addEventListener('keyup', this.handleKeyUp, false)
-  }
+    window.addEventListener('keyup', this.handleKeyUp, false);
+  };
 
   componentWillUnmount = () => {
-    window.removeEventListener('keyup', this.handleKeyUp, false)
-  }
+    window.removeEventListener('keyup', this.handleKeyUp, false);
+  };
 
   handleClick = (e, index) => {
-    e.preventDefault()
-    this.setState({ showLightbox: !this.state.showLightbox, selectedImage: index })
-  }
+    e.preventDefault();
+    this.setState({
+      showLightbox: !this.state.showLightbox,
+      selectedImage: index
+    });
+  };
 
   closeModal = () => {
-    this.setState({ showLightbox: false })
-  }
+    this.setState({ showLightbox: false });
+  };
 
   goBack = () => {
-    this.setState({ selectedImage: this.state.selectedImage - 1 })
-  }
+    this.setState({ selectedImage: this.state.selectedImage - 1 });
+  };
 
   goForward = () => {
-    this.setState({ selectedImage: this.state.selectedImage + 1 })
-  }
+    this.setState({ selectedImage: this.state.selectedImage + 1 });
+  };
 
   handleKeyUp = e => {
-    e.preventDefault()
-    const { keyCode } = e
+    e.preventDefault();
+    const { keyCode } = e;
     if (this.state.showLightbox) {
       if (keyCode === 37) {
         // Left Arrow Key
         if (this.state.selectedImage > 0) {
-          this.setState({ selectedImage: this.state.selectedImage - 1 })
+          this.setState({ selectedImage: this.state.selectedImage - 1 });
         }
       }
       if (keyCode === 39) {
         // Right Arrow Key
         if (this.state.selectedImage < this.props.images.length - 1) {
-          this.setState({ selectedImage: this.state.selectedImage + 1 })
+          this.setState({ selectedImage: this.state.selectedImage + 1 });
         }
       }
       if (keyCode === 27) {
         // Escape key
-        this.setState({ showLightbox: false })
+        this.setState({ showLightbox: false });
       }
     }
-  }
+  };
 
   render() {
-    const { images } = this.props
-    const { showLightbox, selectedImage } = this.state
+    const { images } = this.props;
+    const { showLightbox, selectedImage } = this.state;
     return (
       <Fragment>
         <Gallery>
           {images.map((img, i) => (
             <GalleryItem key={img.node.fluid.src}>
-              <a href={img.node.fluid.src} alt="Project Image" onClick={e => this.handleClick(e, i)}>
+              <a
+                href={img.node.fluid.src}
+                alt="Project Image"
+                onClick={e => this.handleClick(e, i)}
+              >
                 <StyledImg fluid={img.node.fluid} />
               </a>
             </GalleryItem>
           ))}
         </Gallery>
 
-        <LightboxModal visible={showLightbox} onKeyUp={e => this.handleKeyDown(e)}>
+        <LightboxModal
+          visible={showLightbox}
+          onKeyUp={e => this.handleKeyDown(e)}
+        >
           <LightboxContent>
             <Img fluid={images[selectedImage].node.fluid} />
             <Controls>
@@ -81,7 +91,10 @@ class Lightbox extends Component {
                 <Button onClick={this.goBack} disabled={selectedImage === 0}>
                   Previous
                 </Button>
-                <Button onClick={this.goForward} disabled={selectedImage === images.length - 1}>
+                <Button
+                  onClick={this.goForward}
+                  disabled={selectedImage === images.length - 1}
+                >
                   Next
                 </Button>
               </LeftRight>
@@ -89,7 +102,7 @@ class Lightbox extends Component {
           </LightboxContent>
         </LightboxModal>
       </Fragment>
-    )
+    );
   }
 }
 
@@ -104,7 +117,7 @@ const StyledImg = styled(Img)`
     object-fit: cover !important;
     object-position: 0% 0% !important;
   }
-`
+`;
 
 const Gallery = styled.div`
   display: grid;
@@ -122,13 +135,13 @@ const Gallery = styled.div`
   .gatsby-image-outer-wrapper {
     height: 100%;
   }
-`
+`;
 
 const GalleryItem = styled.div`
   position: relative;
-`
+`;
 
-const Button = styled.button``
+const Button = styled.button``;
 
 const LightboxModal = styled.div`
   position: absolute;
@@ -142,26 +155,26 @@ const LightboxModal = styled.div`
   background: rgba(0, 0, 0, 0.5);
   opacity: ${props => (props.visible ? '1' : '0')};
   visibility: ${props => (props.visible ? 'visible' : 'hidden')};
-`
+`;
 const LightboxContent = styled.div`
   margin: 15px;
   max-width: 700px;
   width: 100%;
-`
+`;
 
 const Controls = styled.div`
   display: flex;
   justify-content: space-between;
-`
+`;
 
 const LeftRight = styled.div`
   button:first-child {
     margin-right: 10px;
   }
-`
+`;
 
 Lightbox.propTypes = {
-  images: PropTypes.array.isRequired,
-}
+  images: PropTypes.array.isRequired
+};
 
-export default Lightbox
+export default Lightbox;
