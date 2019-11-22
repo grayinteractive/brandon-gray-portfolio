@@ -37,11 +37,6 @@ export const menuPageOptions = [
 		route: '/projects',
 		colour: '#305077',
 	},
-	{
-		text: 'Blog',
-		route: '/blog',
-		colour: '#00BA93',
-	},
 ];
 
 export const contactOptions = [
@@ -72,7 +67,7 @@ export const resumeOptions = [
 export const greetingOptions = [
 	'Hi!',
 	'Hey!',
-	'Heya!',
+	'Hello!',
 	'Yo!',
 	'Salut!',
 	'👋🏿 !',

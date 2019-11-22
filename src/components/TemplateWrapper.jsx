@@ -15,7 +15,7 @@ import Transition from './Transition';
 
 // Global styles go here!
 const TemplateContainer = styled.div`
-  font-family: 'Cabin', sans-serif;
+  font-family: sans-serif;
   color: #464646;
   position: absolute;
   top: ${props => (props.outerBounds && props.outerBounds.top) || 0};
@@ -53,7 +53,7 @@ class TemplateWrapper extends React.Component {
           <title>{this.state.title}</title>
           <meta
             name="description"
-            content="Personal website/portfolio of Brandon Gray, front end web developer and UI designer. I love bringing great things to life!"
+            content="Personal website/portfolio of Brandon Gray, front end web developer. I love bringing great ideas to life!"
           />
           <meta
             name="keywords"

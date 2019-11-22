@@ -6,12 +6,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-source-medium',
-      options: {
-        username: `@brandonagray`,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-styled-components',
     },
     {
@@ -33,7 +27,6 @@ module.exports = {
           `PT Sans`,
           `PT Serif`,
           `lato`,
-          `cabin`,
         ]
       }
     },
