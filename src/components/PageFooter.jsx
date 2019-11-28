@@ -77,7 +77,7 @@ const PageFooter = () => (
       </SVGDrawIcon>
     </a>
     <p style={{ gridArea: 'copyright' }} id="copyright">
-      © Brandon A Gray, 2019.
+      © Brandon A Gray & Alex Yizhe Xie, 2019.
     </p>
   </FooterContainer>
 );
