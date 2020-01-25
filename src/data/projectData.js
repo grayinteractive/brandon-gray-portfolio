@@ -1,6 +1,37 @@
 export const projectsList = [
 	// eslint-disable-line
 	{
+		name: 'The Nomadic Dev',
+		desc:
+			'Founded, designed and developed this website dedicated to helping people find remote jobs.',
+		color: '#9CCDA1',
+		imgSource: '/img/projects/the-nomadic-dev.png',
+		imgGallery: '/img/projects/1',
+		techStack: [
+			{ name: 'React', icon: 'devicons devicons-react', color: '#02C7E9' },
+			{
+				name: 'JavaScript',
+				icon: 'devicons devicons-javascript',
+				color: '#0062A8',
+			},
+			{
+				name: 'Redis',
+				icon: 'devicons devicons-redis',
+				color: '#D92B21',
+			},
+			{ name: 'HTML', icon: 'devicons devicons-html5', color: '#EE8407' },
+			{ name: 'CSS Grid', icon: 'devicons devicons-css3', color: '#4173D5' },
+			{
+				name: 'Webpack',
+				icon: 'devicons devicons-webplatform',
+				color: '#666666',
+			},
+		],
+		actionLinks: [
+			{ name: 'View on Web', icon: 'monitor', url: 'https://thenomadicdev.com' },
+		],
+	},
+	{
 		name: 'Nokia / Nuage SD-WAN Portal',
 		desc:
 			'Developed the front end for this next-generation networking service.',
@@ -177,22 +208,5 @@ export const projectsList = [
 			{ name: 'PHP', icon: 'devicons devicons-php', color: '#0062A8' },
 		],
 		actionLinks: [],
-	},
-	{
-		name: 'Capital Hydroseeding',
-		desc:
-			'A website for a hydroseeding business in the National Captial Region.',
-		color: '#6e82b0',
-		imgSource: '/img/projects/hydroseeding.png',
-		imgGallery: '/img/projects/7',
-		techStack: [
-			{
-				name: 'Wordpress',
-				icon: 'devicons devicons-wordpress',
-				color: '#3DAEFF',
-			},
-			{ name: 'PHP', icon: 'devicons devicons-php', color: '#0062A8' },
-		],
-		actionLinks: [],
-	},
+	}
 ];
