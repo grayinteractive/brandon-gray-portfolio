@@ -5,7 +5,7 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![GitHub license](https://img.shields.io/github/license/brandonagray/brandon-gray-portfolio.svg?style=flat-square)](https://github.com/brandonagray/brandon-gray-portfolio/blob/master/LICENSE)
 
-Personal website/portfolio of Brandon Gray.
+Personal website/portfolio of Brandon Gray, inspired by [old.alexxie.ca](https://github.com/alexieyizhe/old.alexxie.ca).
 
 Powered by [React](https://reactjs.org/) and [GatsbyJS](https://www.gatsbyjs.org/).  
 Follows [Airbnb](https://github.com/airbnb/javascript) and [Prettier](https://prettier.io/) coding style.  
